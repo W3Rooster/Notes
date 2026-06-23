@@ -1,1 +1,41 @@
+name: WP Social Notes Sync
 
+on:
+  repository_dispatch:
+    types: [wp_social_note]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Create Social Note file
+        run: |
+          mkdir -p social-notes
+          DATE=$(date +%Y-%m-%d-%H%M%S)
+
+          TITLE="${{ github.event.client_payload.title }}"
+          CONTENT="${{ github.event.client_payload.content }}"
+          URL="${{ github.event.client_payload.url }}"
+
+          FILENAME="social-notes/${DATE}-${TITLE// /-}.md"
+
+          echo "---" > "$FILENAME"
+          echo "title: $TITLE" >> "$FILENAME"
+          echo "date: $(date)" >> "$FILENAME"
+          echo "source_url: $URL" >> "$FILENAME"
+          echo "type: social-note" >> "$FILENAME"
+          echo "---" >> "$FILENAME"
+          echo "" >> "$FILENAME"
+          echo "$CONTENT" >> "$FILENAME"
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "w3rooster-bot"
+          git config --global user.email "bot@w3rooster.com"
+          git add .
+          git commit -m "New Social Note sync" || exit 0
+          git push

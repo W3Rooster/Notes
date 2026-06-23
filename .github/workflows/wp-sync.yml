@@ -15,24 +15,34 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          persist-credentials: true
 
-      - name: Create Social Notes from trigger
+      - name: Show webhook payload (DEBUG)
+        run: |
+          echo "Event type: ${{ github.event.action }}"
+          echo "Payload: ${{ toJson(github.event.client_payload) }}"
+
+      - name: Create Social Notes from WP
         run: |
           mkdir -p social-notes
 
-          echo "Triggered from WordPress webhook at $(date)" > social-notes/note.txt
+          TITLE="${{ github.event.client_payload.title }}"
+          CONTENT="${{ github.event.client_payload.content }}"
+          URL="${{ github.event.client_payload.url }}"
+          ID="${{ github.event.client_payload.post_id }}"
+
+          echo "Title: $TITLE" > social-notes/note.txt
+          echo "Content: $CONTENT" >> social-notes/note.txt
+          echo "URL: $URL" >> social-notes/note.txt
 
           cat > social-notes/notes.json <<EOF
           [
             {
-              "id": "wp-triggered",
-              "title": "WP Triggered Note",
-              "content": "This was triggered from WordPress webhook",
+              "id": "$ID",
+              "title": "$TITLE",
+              "content": "$CONTENT",
+              "url": "$URL",
               "date": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
             }
           ]
@@ -44,6 +54,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add social-notes/
+
           git diff --staged --quiet || git commit -m "WP webhook sync update"
 
       - name: Push changes

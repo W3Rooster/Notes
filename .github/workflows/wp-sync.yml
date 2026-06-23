@@ -1,50 +1,54 @@
 name: WP Social Notes Sync
 
 on:
-  workflow_dispatch:
-    inputs:
-      title:
-        required: true
-      content:
-        required: true
-      url:
-        required: false
-
+workflow_dispatch:
+inputs:
+title:
+description: "Note title"
+required: true
+content:
+description: "Note content"
+required: true
+url:
+description: "Source URL"
+required: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+build:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        
+```
+steps:
+  - name: Checkout repo
+    uses: actions/checkout@v4
+
   - name: Create Social Note file
-  run: |
-    mkdir -p social-notes
-    DATE=$(date +%Y-%m-%d-%H%M%S)
+    run: |
+      mkdir -p social-notes
+      DATE=$(date +%Y-%m-%d-%H%M%S)
 
-    TITLE="${{ github.event.inputs.title }}"
-    CONTENT="${{ github.event.inputs.content }}"
-    URL="${{ github.event.inputs.url }}"
+      TITLE="${{ github.event.inputs.title }}"
+      CONTENT="${{ github.event.inputs.content }}"
+      URL="${{ github.event.inputs.url }}"
 
-    SAFE_TITLE=$(echo "$TITLE" | tr ' ' '-')
+      SAFE_TITLE=$(echo "$TITLE" | tr ' ' '-')
 
-    FILENAME="social-notes/${DATE}-${SAFE_TITLE}.md"
+      FILENAME="social-notes/${DATE}-${SAFE_TITLE}.md"
 
-    echo "---" > "$FILENAME"
-    echo "title: $TITLE" >> "$FILENAME"
-    echo "date: $(date)" >> "$FILENAME"
-    echo "source_url: $URL" >> "$FILENAME"
-    echo "type: social-note" >> "$FILENAME"
-    echo "---" >> "$FILENAME"
-    echo "" >> "$FILENAME"
-    echo "$CONTENT" >> "$FILENAME"
+      echo "---" > "$FILENAME"
+      echo "title: $TITLE" >> "$FILENAME"
+      echo "date: $(date)" >> "$FILENAME"
+      echo "source_url: $URL" >> "$FILENAME"
+      echo "type: social-note" >> "$FILENAME"
+      echo "---" >> "$FILENAME"
+      echo "" >> "$FILENAME"
+      echo "$CONTENT" >> "$FILENAME"
 
-      - name: Commit changes
-        run: |
-          git config --global user.name "w3rooster-bot"
-          git config --global user.email "bot@w3rooster.com"
-          git add .
-          git commit -m "New Social Note sync" || exit 0
-          git push
+  - name: Commit changes
+    run: |
+      git config --global user.name "w3rooster-bot"
+      git config --global user.email "bot@w3rooster.com"
+      git add .
+      git commit -m "New Social Note sync" || exit 0
+      git push
+```

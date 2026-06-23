@@ -1,9 +1,5 @@
 name: WP Social Notes Sync
 
-on:
-  repository_dispatch:
-    types: [wp_social_note]
-
 jobs:
   build:
     runs-on: ubuntu-latest

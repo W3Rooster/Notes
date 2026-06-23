@@ -18,26 +18,28 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        
+  - name: Create Social Note file
+  run: |
+    mkdir -p social-notes
+    DATE=$(date +%Y-%m-%d-%H%M%S)
 
-      - name: Create Social Note file
-        run: |
-          mkdir -p social-notes
-          DATE=$(date +%Y-%m-%d-%H%M%S)
+    TITLE="${{ github.event.inputs.title }}"
+    CONTENT="${{ github.event.inputs.content }}"
+    URL="${{ github.event.inputs.url }}"
 
-          TITLE="${{ github.event.client_payload.title }}"
-          CONTENT="${{ github.event.client_payload.content }}"
-          URL="${{ github.event.client_payload.url }}"
+    SAFE_TITLE=$(echo "$TITLE" | tr ' ' '-')
 
-          FILENAME="social-notes/${DATE}-${TITLE// /-}.md"
+    FILENAME="social-notes/${DATE}-${SAFE_TITLE}.md"
 
-          echo "---" > "$FILENAME"
-          echo "title: $TITLE" >> "$FILENAME"
-          echo "date: $(date)" >> "$FILENAME"
-          echo "source_url: $URL" >> "$FILENAME"
-          echo "type: social-note" >> "$FILENAME"
-          echo "---" >> "$FILENAME"
-          echo "" >> "$FILENAME"
-          echo "$CONTENT" >> "$FILENAME"
+    echo "---" > "$FILENAME"
+    echo "title: $TITLE" >> "$FILENAME"
+    echo "date: $(date)" >> "$FILENAME"
+    echo "source_url: $URL" >> "$FILENAME"
+    echo "type: social-note" >> "$FILENAME"
+    echo "---" >> "$FILENAME"
+    echo "" >> "$FILENAME"
+    echo "$CONTENT" >> "$FILENAME"
 
       - name: Commit changes
         run: |

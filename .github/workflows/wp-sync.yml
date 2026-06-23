@@ -1,66 +1,60 @@
 name: WP Social Notes Sync
 
 on:
-workflow_dispatch:
-inputs:
-title:
-description: "Note title"
-required: true
-type: string
-content:
-description: "Note content"
-required: true
-type: string
-url:
-description: "Source URL"
-required: false
-type: string
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"  # runs every 30 minutes (optional)
 
 permissions:
-contents: write
+  contents: write
 
 jobs:
-build:
-runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-```
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
+    steps:
+      # 1. Checkout repo (required for git commit/push)
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  - name: Create Social Note file
-    run: |
-      mkdir -p social-notes
+      # 2. Setup Node (optional, useful if you later parse WP JSON)
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-      DATE=$(date +%Y-%m-%d-%H%M%S)
+      # 3. Create Social Notes folder + sample data
+      - name: Generate Social Notes
+        run: |
+          mkdir -p social-notes
 
-      TITLE="${{ github.event.inputs.title }}"
-      CONTENT="${{ github.event.inputs.content }}"
-      URL="${{ github.event.inputs.url }}"
+          # Sample placeholder (replace later with WP API data)
+          echo "Hello from WP Sync - $(date)" > social-notes/note.txt
 
-      SAFE_TITLE=$(echo "$TITLE" | tr ' ' '-' | tr -cd '[:alnum:]-_')
+          # Optional structured JSON format for Jetpack-style notes
+          cat > social-notes/notes.json <<EOF
+          [
+            {
+              "id": "test-1",
+              "title": "Test Note",
+              "content": "Hello from GitHub Actions sync",
+              "date": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            }
+          ]
+          EOF
 
-      FILENAME="social-notes/${DATE}-${SAFE_TITLE}.md"
+      # 4. Commit changes safely
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      {
-        echo "---"
-        echo "title: \"$TITLE\""
-        echo "date: \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\""
-        echo "source_url: \"$URL\""
-        echo "type: social-note"
-        echo "---"
-        echo ""
-        echo "$CONTENT"
-      } > "$FILENAME"
+          git add social-notes/
 
-  - name: Commit and push changes
-    run: |
-      git config user.name "github-actions[bot]"
-      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # only commit if changes exist
+          git diff --staged --quiet || git commit -m "WP Social Notes sync update"
 
-      git add social-notes/
-
-      git diff --staged --quiet || git commit -m "Add social note: ${{ github.event.inputs.title }}"
-
-      git push
-```
+      # 5. Push changes
+      - name: Push to repository
+        run: |
+          git push

@@ -2,8 +2,8 @@ name: WP Social Notes Sync
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/30 * * * *"  # runs every 30 minutes (optional)
+  repository_dispatch:
+    types: [wp-social-notes-sync]
 
 permissions:
   contents: write
@@ -13,48 +13,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo (required for git commit/push)
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Setup Node (optional, useful if you later parse WP JSON)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 3. Create Social Notes folder + sample data
-      - name: Generate Social Notes
+      - name: Create Social Notes from trigger
         run: |
           mkdir -p social-notes
 
-          # Sample placeholder (replace later with WP API data)
-          echo "Hello from WP Sync - $(date)" > social-notes/note.txt
+          echo "Triggered from WordPress webhook at $(date)" > social-notes/note.txt
 
-          # Optional structured JSON format for Jetpack-style notes
           cat > social-notes/notes.json <<EOF
           [
             {
-              "id": "test-1",
-              "title": "Test Note",
-              "content": "Hello from GitHub Actions sync",
+              "id": "wp-triggered",
+              "title": "WP Triggered Note",
+              "content": "This was triggered from WordPress webhook",
               "date": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
             }
           ]
           EOF
 
-      # 4. Commit changes safely
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add social-notes/
+          git diff --staged --quiet || git commit -m "WP webhook sync update"
 
-          # only commit if changes exist
-          git diff --staged --quiet || git commit -m "WP Social Notes sync update"
-
-      # 5. Push changes
-      - name: Push to repository
+      - name: Push changes
         run: |
           git push

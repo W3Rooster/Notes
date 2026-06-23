@@ -18,31 +18,19 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Show webhook payload (DEBUG)
-        run: |
-          echo "Event type: ${{ github.event.action }}"
-          echo "Payload: ${{ toJson(github.event.client_payload) }}"
-
-      - name: Create Social Notes from WP
+      - name: Create Social Notes from trigger
         run: |
           mkdir -p social-notes
 
-          TITLE="${{ github.event.client_payload.title }}"
-          CONTENT="${{ github.event.client_payload.content }}"
-          URL="${{ github.event.client_payload.url }}"
-          ID="${{ github.event.client_payload.post_id }}"
-
-          echo "Title: $TITLE" > social-notes/note.txt
-          echo "Content: $CONTENT" >> social-notes/note.txt
-          echo "URL: $URL" >> social-notes/note.txt
+          echo "Triggered from WordPress webhook at $(date)" > social-notes/note.txt
 
           cat > social-notes/notes.json <<EOF
           [
             {
-              "id": "$ID",
-              "title": "$TITLE",
-              "content": "$CONTENT",
-              "url": "$URL",
+              "id": "${{ github.event.client_payload.post_id }}",
+              "title": "${{ github.event.client_payload.title }}",
+              "content": "${{ github.event.client_payload.content }}",
+              "url": "${{ github.event.client_payload.url }}",
               "date": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
             }
           ]
@@ -59,4 +47,4 @@ jobs:
 
       - name: Push changes
         run: |
-          git push
+          git push origin HEAD

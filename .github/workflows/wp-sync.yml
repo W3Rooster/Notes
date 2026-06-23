@@ -6,12 +6,18 @@ inputs:
 title:
 description: "Note title"
 required: true
+type: string
 content:
 description: "Note content"
 required: true
+type: string
 url:
 description: "Source URL"
 required: false
+type: string
+
+permissions:
+contents: write
 
 jobs:
 build:
@@ -19,36 +25,42 @@ runs-on: ubuntu-latest
 
 ```
 steps:
-  - name: Checkout repo
+  - name: Checkout repository
     uses: actions/checkout@v4
 
   - name: Create Social Note file
     run: |
       mkdir -p social-notes
+
       DATE=$(date +%Y-%m-%d-%H%M%S)
 
       TITLE="${{ github.event.inputs.title }}"
       CONTENT="${{ github.event.inputs.content }}"
       URL="${{ github.event.inputs.url }}"
 
-      SAFE_TITLE=$(echo "$TITLE" | tr ' ' '-')
+      SAFE_TITLE=$(echo "$TITLE" | tr ' ' '-' | tr -cd '[:alnum:]-_')
 
       FILENAME="social-notes/${DATE}-${SAFE_TITLE}.md"
 
-      echo "---" > "$FILENAME"
-      echo "title: $TITLE" >> "$FILENAME"
-      echo "date: $(date)" >> "$FILENAME"
-      echo "source_url: $URL" >> "$FILENAME"
-      echo "type: social-note" >> "$FILENAME"
-      echo "---" >> "$FILENAME"
-      echo "" >> "$FILENAME"
-      echo "$CONTENT" >> "$FILENAME"
+      {
+        echo "---"
+        echo "title: \"$TITLE\""
+        echo "date: \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\""
+        echo "source_url: \"$URL\""
+        echo "type: social-note"
+        echo "---"
+        echo ""
+        echo "$CONTENT"
+      } > "$FILENAME"
 
-  - name: Commit changes
+  - name: Commit and push changes
     run: |
-      git config --global user.name "w3rooster-bot"
-      git config --global user.email "bot@w3rooster.com"
-      git add .
-      git commit -m "New Social Note sync" || exit 0
+      git config user.name "github-actions[bot]"
+      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      git add social-notes/
+
+      git diff --staged --quiet || git commit -m "Add social note: ${{ github.event.inputs.title }}"
+
       git push
 ```

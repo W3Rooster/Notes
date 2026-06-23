@@ -1,5 +1,16 @@
 name: WP Social Notes Sync
 
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        required: true
+      content:
+        required: true
+      url:
+        required: false
+
+
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -2,11 +2,47 @@ name: WP Social Notes Sync
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [wp-social-notes-sync]
+
+permissions:
+  contents: write
 
 jobs:
-  test:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello
-        run: echo "Workflow is working"
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Create note from WP
+        run: |
+          mkdir -p social-notes
+
+          echo "Triggered: ${{ github.event_name }}" > social-notes/debug.txt
+
+          TITLE="${{ github.event.client_payload.title }}"
+          CONTENT="${{ github.event.client_payload.content }}"
+          URL="${{ github.event.client_payload.url }}"
+
+          cat > social-notes/note.json <<EOF
+          {
+            "title": "$TITLE",
+            "content": "$CONTENT",
+            "url": "$URL",
+            "date": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          }
+          EOF
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add social-notes/
+          git diff --staged --quiet || git commit -m "WP sync"
+
+      - name: Push
+        run: |
+          git push origin HEAD

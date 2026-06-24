@@ -1,0 +1,12 @@
+name: WP Social Notes Sync
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello
+        run: echo "Workflow is working"

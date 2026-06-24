@@ -1,1 +1,1 @@
-Triggered: workflow_dispatch
+Triggered: repository_dispatch

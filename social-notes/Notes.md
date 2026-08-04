@@ -1,0 +1,2 @@
+Structure eliminates guesswork.
+___________________

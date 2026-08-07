@@ -4,3 +4,6 @@ W3Rooster verifies allowance logic through direct contract calls, ensuring neith
 ___________________
 When analyzing contract health, some platforms dashboards provide long-term visibility into real transaction behavior. W3Rooster uses these platforms as a factual layer to validate market mechanics beyond what block explorers alone can show.
 ___________________
+Mainnet congestion exposes weak launch strategies. 
+W3Rooster tests high-gas, high-latency conditions to validate how each token behaves under extreme fee escalation.
+___________________

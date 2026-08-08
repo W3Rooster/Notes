@@ -7,3 +7,5 @@ ___________________
 Mainnet congestion exposes weak launch strategies. 
 W3Rooster tests high-gas, high-latency conditions to validate how each token behaves under extreme fee escalation.
 ___________________
+Your token needs order, not luck.
+___________________

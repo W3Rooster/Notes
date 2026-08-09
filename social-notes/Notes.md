@@ -9,3 +9,5 @@ W3Rooster tests high-gas, high-latency conditions to validate how each token beh
 ___________________
 Your token needs order, not luck.
 ___________________
+W3Rooster documents every router interaction to guarantee deterministic amounts in/out and stable slippage behavior across all Uniswap-compatible routers.
+___________________

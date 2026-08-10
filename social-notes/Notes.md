@@ -11,3 +11,7 @@ Your token needs order, not luck.
 ___________________
 W3Rooster documents every router interaction to guarantee deterministic amounts in/out and stable slippage behavior across all Uniswap-compatible routers.
 ___________________
+RPC stability determines launch safety more than most projects realize. 
+A private RPC reduces mempool exposure, while a public fallback prevents stalls. 
+W3Rooster combines both to reduce broadcast uncertainty under congestion.
+___________________

@@ -15,3 +15,5 @@ RPC stability determines launch safety more than most projects realize.
 A private RPC reduces mempool exposure, while a public fallback prevents stalls. 
 W3Rooster combines both to reduce broadcast uncertainty under congestion.
 ___________________
+W3Rooster ensures the first liquidity event is broadcast via a private RPC to minimize mempool spying, followed by fallback broadcast for confirmation stability.
+___________________

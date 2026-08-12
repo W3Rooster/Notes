@@ -17,3 +17,5 @@ W3Rooster combines both to reduce broadcast uncertainty under congestion.
 ___________________
 W3Rooster ensures the first liquidity event is broadcast via a private RPC to minimize mempool spying, followed by fallback broadcast for confirmation stability.
 ___________________
+Your launch window is one block long.
+___________________

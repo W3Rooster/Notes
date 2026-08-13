@@ -19,3 +19,6 @@ W3Rooster ensures the first liquidity event is broadcast via a private RPC to mi
 ___________________
 Your launch window is one block long.
 ___________________
+W3Rooster does not rely on theoretical fee logic. 
+We validate actual token movement through raw balance checks before and after swaps to ensure no hidden path intercepts liquidity.
+___________________

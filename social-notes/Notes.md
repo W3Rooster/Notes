@@ -22,3 +22,5 @@ ___________________
 W3Rooster does not rely on theoretical fee logic. 
 We validate actual token movement through raw balance checks before and after swaps to ensure no hidden path intercepts liquidity.
 ___________________
+The mempool is not your friend.
+___________________

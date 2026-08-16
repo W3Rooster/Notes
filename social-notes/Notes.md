@@ -24,3 +24,6 @@ We validate actual token movement through raw balance checks before and after sw
 ___________________
 The mempool is not your friend.
 ___________________
+Most launch failures come from overlooked router initialization. 
+W3Rooster confirms router → pair → token order, ensuring the path is correct before the first liquidity block goes live.
+___________________

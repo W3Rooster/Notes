@@ -27,3 +27,5 @@ ___________________
 Most launch failures come from overlooked router initialization. 
 W3Rooster confirms router → pair → token order, ensuring the path is correct before the first liquidity block goes live.
 ___________________
+Blocks don’t wait.
+___________________

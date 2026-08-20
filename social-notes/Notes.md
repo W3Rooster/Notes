@@ -29,3 +29,5 @@ W3Rooster confirms router → pair → token order, ensuring the path is correct
 ___________________
 Blocks don’t wait.
 ___________________
+W3Rooster validates tax mechanics on forked networks by simulating both buy and sell routes under minimal and maximal slippage, ensuring no soft-revert occurs under pressure.
+___________________

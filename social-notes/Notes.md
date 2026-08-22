@@ -33,3 +33,6 @@ W3Rooster validates tax mechanics on forked networks by simulating both buy and 
 ___________________
 W3Rooster validates tax mechanics on forked networks by simulating both buy and sell routes under minimal and maximal slippage, ensuring no soft-revert occurs under pressure.
 ___________________
+The reason some tokens fail on launch is that slippage and gas escalations overlap. 
+W3Rooster tests both simultaneously to confirm stable routing under congestion.
+___________________

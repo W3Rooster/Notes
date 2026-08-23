@@ -36,3 +36,5 @@ ___________________
 The reason some tokens fail on launch is that slippage and gas escalations overlap. 
 W3Rooster tests both simultaneously to confirm stable routing under congestion.
 ___________________
+Security starts with doubt.
+___________________

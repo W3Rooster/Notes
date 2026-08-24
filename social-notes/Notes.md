@@ -38,3 +38,5 @@ W3Rooster tests both simultaneously to confirm stable routing under congestion.
 ___________________
 Security starts with doubt.
 ___________________
+W3Rooster documents every execution path—from deployer burn, to Safe takeover, to router detection—to guarantee predictable logic even during the first chaotic minutes of launch.
+___________________

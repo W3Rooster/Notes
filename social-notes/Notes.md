@@ -40,3 +40,5 @@ Security starts with doubt.
 ___________________
 W3Rooster documents every execution path—from deployer burn, to Safe takeover, to router detection—to guarantee predictable logic even during the first chaotic minutes of launch.
 ___________________
+If routing fails, everything fails.
+___________________

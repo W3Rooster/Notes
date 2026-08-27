@@ -42,3 +42,5 @@ W3Rooster documents every execution path—from deployer burn, to Safe takeover,
 ___________________
 If routing fails, everything fails.
 ___________________
+A Hardhat fork pinned at the wrong block distorts the entire simulation. W3Rooster always uses same-block forks to expose true network conditions without random state drift.
+___________________

@@ -46,3 +46,5 @@ A Hardhat fork pinned at the wrong block distorts the entire simulation. W3Roost
 ___________________
 Precision is protection.
 ___________________
+W3Rooster ensures buyers are never incorrectly flagged during cap enforcement by validating wallet limits before liquidity, after liquidity, and during low-liquidity scenarios.
+___________________

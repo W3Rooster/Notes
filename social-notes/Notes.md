@@ -48,3 +48,5 @@ Precision is protection.
 ___________________
 W3Rooster ensures buyers are never incorrectly flagged during cap enforcement by validating wallet limits before liquidity, after liquidity, and during low-liquidity scenarios.
 ___________________
+Bad timing creates bad legends.
+___________________

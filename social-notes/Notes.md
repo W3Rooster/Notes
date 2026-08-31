@@ -50,3 +50,6 @@ W3Rooster ensures buyers are never incorrectly flagged during cap enforcement by
 ___________________
 Bad timing creates bad legends.
 ___________________
+Router fallback behavior often reveals hidden problems. 
+W3Rooster inspects the getAmountsOut failure paths to ensure no unexpected revert bubbles during live buying.
+___________________

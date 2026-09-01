@@ -53,3 +53,5 @@ ___________________
 Router fallback behavior often reveals hidden problems. 
 W3Rooster inspects the getAmountsOut failure paths to ensure no unexpected revert bubbles during live buying.
 ___________________
+A launch is not a rehearsal.
+___________________

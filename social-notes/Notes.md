@@ -55,3 +55,5 @@ W3Rooster inspects the getAmountsOut failure paths to ensure no unexpected rever
 ___________________
 A launch is not a rehearsal.
 ___________________
+W3Rooster tests signature propagation across RPCs to ensure deployer → Safe handoff never conflicts with pending transactions or mempool duplication.
+___________________

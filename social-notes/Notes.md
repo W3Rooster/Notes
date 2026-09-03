@@ -57,3 +57,5 @@ A launch is not a rehearsal.
 ___________________
 W3Rooster tests signature propagation across RPCs to ensure deployer → Safe handoff never conflicts with pending transactions or mempool duplication.
 ___________________
+Stability is designed, not discovered.
+___________________

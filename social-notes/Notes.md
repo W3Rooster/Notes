@@ -59,3 +59,5 @@ W3Rooster tests signature propagation across RPCs to ensure deployer → Safe ha
 ___________________
 Stability is designed, not discovered.
 ___________________
+W3Rooster measures delay patterns to confirm timing-sensitive mechanics do not misfire during first-block events.
+___________________

@@ -61,3 +61,6 @@ Stability is designed, not discovered.
 ___________________
 W3Rooster measures delay patterns to confirm timing-sensitive mechanics do not misfire during first-block events.
 ___________________
+Launch once. 
+Launch clean.
+___________________

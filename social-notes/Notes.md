@@ -66,3 +66,5 @@ Launch clean.
 ___________________
 W3Rooster does multi-path routing tests to confirm the token behaves correctly on router forks, preventing fallback swaps from hitting unintended liquidity pools.
 ___________________
+The first block decides your fate.
+___________________

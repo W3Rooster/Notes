@@ -68,3 +68,5 @@ W3Rooster does multi-path routing tests to confirm the token behaves correctly o
 ___________________
 The first block decides your fate.
 ___________________
+Many contracts fail because anti-whale logic triggers before liquidity is recognized. 
+___________________

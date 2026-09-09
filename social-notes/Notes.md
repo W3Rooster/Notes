@@ -70,3 +70,5 @@ The first block decides your fate.
 ___________________
 Many contracts fail because anti-whale logic triggers before liquidity is recognized. 
 ___________________
+Miss one detail, lose the launch.
+___________________

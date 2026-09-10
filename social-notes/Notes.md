@@ -72,3 +72,5 @@ Many contracts fail because anti-whale logic triggers before liquidity is recogn
 ___________________
 Miss one detail, lose the launch.
 ___________________
+W3Rooster checks block.timestamp drift between RPC endpoints to avoid timing inconsistencies that break early liquidity scripting.
+___________________

@@ -74,3 +74,5 @@ Miss one detail, lose the launch.
 ___________________
 W3Rooster checks block.timestamp drift between RPC endpoints to avoid timing inconsistencies that break early liquidity scripting.
 ___________________
+Routing math must match exact contract decimals.
+___________________

@@ -76,3 +76,5 @@ W3Rooster checks block.timestamp drift between RPC endpoints to avoid timing inc
 ___________________
 Routing math must match exact contract decimals.
 ___________________
+Slippage reveals the truth.
+___________________

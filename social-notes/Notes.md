@@ -80,3 +80,5 @@ Slippage reveals the truth.
 ___________________
 W3Rooster captures pre-launch mempool data to ensure the liquidity transaction is broadcast securely, without leaving exploitable timing windows.
 ___________________
+Everything breaks under pressure—unless you prepare.
+___________________

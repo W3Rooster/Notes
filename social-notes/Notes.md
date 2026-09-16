@@ -82,3 +82,5 @@ W3Rooster captures pre-launch mempool data to ensure the liquidity transaction i
 ___________________
 Everything breaks under pressure—unless you prepare.
 ___________________
+W3Rooster simulates transfer + buy combinations to prevent accidental lockouts after liquidity.
+___________________

@@ -84,3 +84,5 @@ Everything breaks under pressure—unless you prepare.
 ___________________
 W3Rooster simulates transfer + buy combinations to prevent accidental lockouts after liquidity.
 ___________________
+Confusion is the enemy.
+___________________

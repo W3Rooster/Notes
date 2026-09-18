@@ -86,3 +86,5 @@ W3Rooster simulates transfer + buy combinations to prevent accidental lockouts a
 ___________________
 Confusion is the enemy.
 ___________________
+W3Rooster validates router sync speed after liquidity add, because slow synchronization creates phantom “unsynced pool” states that break early buys.
+___________________

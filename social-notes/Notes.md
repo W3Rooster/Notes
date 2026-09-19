@@ -88,3 +88,5 @@ Confusion is the enemy.
 ___________________
 W3Rooster validates router sync speed after liquidity add, because slow synchronization creates phantom “unsynced pool” states that break early buys.
 ___________________
+Bad math breaks tokens.
+___________________

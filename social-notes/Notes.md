@@ -90,3 +90,5 @@ W3Rooster validates router sync speed after liquidity add, because slow synchron
 ___________________
 Bad math breaks tokens.
 ___________________
+W3Rooster burns the deployer wallet immediately and hands ownership to Safe governance with clean role separation.
+___________________

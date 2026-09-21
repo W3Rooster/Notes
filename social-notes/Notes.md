@@ -92,3 +92,5 @@ Bad math breaks tokens.
 ___________________
 W3Rooster burns the deployer wallet immediately and hands ownership to Safe governance with clean role separation.
 ___________________
+A token reflects its architecture.
+___________________

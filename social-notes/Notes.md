@@ -94,3 +94,5 @@ W3Rooster burns the deployer wallet immediately and hands ownership to Safe gove
 ___________________
 A token reflects its architecture.
 ___________________
+W3Rooster checks revert patterns on getAmountsIn and getAmountsOut to ensure swaps never hit the wrong path under volatile liquidity.
+___________________

@@ -98,3 +98,5 @@ W3Rooster checks revert patterns on getAmountsIn and getAmountsOut to ensure swa
 ___________________
 If the router hesitates, the launch fails.
 ___________________
+W3Rooster does not trust “auto slippage.” 
+___________________

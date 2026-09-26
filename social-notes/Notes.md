@@ -100,3 +100,5 @@ If the router hesitates, the launch fails.
 ___________________
 W3Rooster does not trust “auto slippage.” 
 ___________________
+Clean logic survives.
+___________________

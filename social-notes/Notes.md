@@ -104,3 +104,5 @@ Clean logic survives.
 ___________________
 We validate real swap outcomes using exact router math to confirm trades execute without silent clipping or hidden burn-like behavior.
 ___________________
+Speed without structure is chaos.
+___________________

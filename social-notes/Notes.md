@@ -108,3 +108,5 @@ Speed without structure is chaos.
 ___________________
 W3Rooster measures latencies during various RPCs to ensure that time-sensitive safety mechanisms are not triggered on the wrong block during liquidity deployment.
 ___________________
+Test the edges, not the center.
+___________________

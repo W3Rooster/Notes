@@ -110,3 +110,5 @@ W3Rooster measures latencies during various RPCs to ensure that time-sensitive s
 ___________________
 Test the edges, not the center.
 ___________________
+W3Rooster checks Uniswap pair initialization across multiple RPC providers to confirm no desync appears between the creation block and the first sync event.
+___________________

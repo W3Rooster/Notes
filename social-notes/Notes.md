@@ -112,3 +112,5 @@ Test the edges, not the center.
 ___________________
 W3Rooster checks Uniswap pair initialization across multiple RPC providers to confirm no desync appears between the creation block and the first sync event.
 ___________________
+A token is only as honest as its math.
+___________________

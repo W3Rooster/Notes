@@ -114,3 +114,5 @@ W3Rooster checks Uniswap pair initialization across multiple RPC providers to co
 ___________________
 A token is only as honest as its math.
 ___________________
+W3Rooster validates gas paths on forked networks to ensure the two systems never collide.
+___________________

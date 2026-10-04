@@ -116,3 +116,5 @@ A token is only as honest as its math.
 ___________________
 W3Rooster validates gas paths on forked networks to ensure the two systems never collide.
 ___________________
+Security begins before deployment.
+___________________

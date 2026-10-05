@@ -118,3 +118,5 @@ W3Rooster validates gas paths on forked networks to ensure the two systems never
 ___________________
 Security begins before deployment.
 ___________________
+W3Rooster executes forked swaps with different gas price tiers to simulate peak congestion, revealing failures that normal test scripts cannot detect.
+___________________

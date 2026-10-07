@@ -122,3 +122,5 @@ W3Rooster executes forked swaps with different gas price tiers to simulate peak 
 ___________________
 Randomness breaks the launch.
 ___________________
+W3Rooster validates contract behavior under both EIP-1559 and legacy gas modes to ensure no environment-dependent behavior appears during early trades.
+___________________

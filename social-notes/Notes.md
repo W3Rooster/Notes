@@ -124,3 +124,5 @@ Randomness breaks the launch.
 ___________________
 W3Rooster validates contract behavior under both EIP-1559 and legacy gas modes to ensure no environment-dependent behavior appears during early trades.
 ___________________
+Slippage is a warning, not a number.
+___________________

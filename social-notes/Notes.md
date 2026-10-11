@@ -126,3 +126,5 @@ W3Rooster validates contract behavior under both EIP-1559 and legacy gas modes t
 ___________________
 Slippage is a warning, not a number.
 ___________________
+W3Rooster simulates initial synchronization to confirm a predictable application.
+___________________

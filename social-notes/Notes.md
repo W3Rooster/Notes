@@ -128,3 +128,5 @@ Slippage is a warning, not a number.
 ___________________
 W3Rooster simulates initial synchronization to confirm a predictable application.
 ___________________
+One misalignment, total failure.
+___________________

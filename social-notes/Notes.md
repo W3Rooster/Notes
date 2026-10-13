@@ -130,3 +130,5 @@ W3Rooster simulates initial synchronization to confirm a predictable application
 ___________________
 One misalignment, total failure.
 ___________________
+W3Rooster confirms that purchases via alternative tokens do not circumvent the defined restrictions.
+___________________

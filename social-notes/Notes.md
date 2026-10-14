@@ -132,3 +132,5 @@ One misalignment, total failure.
 ___________________
 W3Rooster confirms that purchases via alternative tokens do not circumvent the defined restrictions.
 ___________________
+Consistency beats complexity.
+___________________

@@ -134,3 +134,5 @@ W3Rooster confirms that purchases via alternative tokens do not circumvent the d
 ___________________
 Consistency beats complexity.
 ___________________
+W3Rooster confirms Safe role distribution so the proposer, executor, and admin functions never overlap, preventing governance deadlocks or accidental permissions.
+___________________

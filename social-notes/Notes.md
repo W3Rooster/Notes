@@ -138,3 +138,5 @@ W3Rooster confirms Safe role distribution so the proposer, executor, and admin f
 ___________________
 A launch is a single point in time.
 ___________________
+To prevent stuck transactions, W3Rooster tests escalated gas loops and RPC fallback conditions across multiple endpoints to confirm consistent behavior during network spikes.
+___________________

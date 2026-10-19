@@ -142,3 +142,5 @@ To prevent stuck transactions, W3Rooster tests escalated gas loops and RPC fallb
 ___________________
 Precision creates trust.
 ___________________
+We measure the gap between liquidity broadcast and router sync across RPCs to avoid invisible blind spots in the first seconds of trading.
+___________________

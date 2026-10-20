@@ -144,3 +144,5 @@ Precision creates trust.
 ___________________
 We measure the gap between liquidity broadcast and router sync across RPCs to avoid invisible blind spots in the first seconds of trading.
 ___________________
+One delay can rewrite the entire chart.
+___________________

@@ -146,3 +146,5 @@ We measure the gap between liquidity broadcast and router sync across RPCs to av
 ___________________
 One delay can rewrite the entire chart.
 ___________________
+Some tokens break, because they rely on default gas limits. 
+___________________

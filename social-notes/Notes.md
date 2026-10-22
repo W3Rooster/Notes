@@ -148,3 +148,5 @@ One delay can rewrite the entire chart.
 ___________________
 Some tokens break, because they rely on default gas limits. 
 ___________________
+If timing breaks, logic breaks.
+___________________

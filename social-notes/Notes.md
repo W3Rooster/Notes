@@ -150,3 +150,5 @@ Some tokens break, because they rely on default gas limits.
 ___________________
 If timing breaks, logic breaks.
 ___________________
+W3Rooster validates transfer flow by replaying swap sequences through forked blocks, verifying the exact sequence of events prior to liquidity recognition.
+___________________

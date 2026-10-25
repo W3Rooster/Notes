@@ -154,3 +154,5 @@ W3Rooster validates transfer flow by replaying swap sequences through forked blo
 ___________________
 Your first block defines your reputation.
 ___________________
+W3Rooster checks chain math for all hop permutations to prevent incorrect outputs on early buys.
+___________________

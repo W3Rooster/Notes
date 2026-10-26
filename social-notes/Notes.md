@@ -156,3 +156,5 @@ Your first block defines your reputation.
 ___________________
 W3Rooster checks chain math for all hop permutations to prevent incorrect outputs on early buys.
 ___________________
+Never trust one path.
+___________________

@@ -158,3 +158,5 @@ W3Rooster checks chain math for all hop permutations to prevent incorrect output
 ___________________
 Never trust one path.
 ___________________
+W3Rooster reconstructs full router ABI trees to detect shadow functions or swapped parameter orders that break compatibility on non-standard routers.
+___________________

@@ -160,3 +160,5 @@ Never trust one path.
 ___________________
 W3Rooster reconstructs full router ABI trees to detect shadow functions or swapped parameter orders that break compatibility on non-standard routers.
 ___________________
+Clean contracts create clean markets.
+___________________

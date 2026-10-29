@@ -162,3 +162,5 @@ W3Rooster reconstructs full router ABI trees to detect shadow functions or swapp
 ___________________
 Clean contracts create clean markets.
 ___________________
+W3Rooster simulates slippage shock events by injecting thin-liquidity conditions into forked networks, revealing how the token behaves under extreme volatility.
+___________________

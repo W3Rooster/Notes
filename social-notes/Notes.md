@@ -164,3 +164,5 @@ Clean contracts create clean markets.
 ___________________
 W3Rooster simulates slippage shock events by injecting thin-liquidity conditions into forked networks, revealing how the token behaves under extreme volatility.
 ___________________
+Pressure exposes the architecture.
+___________________

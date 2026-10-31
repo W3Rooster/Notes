@@ -166,3 +166,5 @@ W3Rooster simulates slippage shock events by injecting thin-liquidity conditions
 ___________________
 Pressure exposes the architecture.
 ___________________
+A Safe multisig loses its value if proposers and executors overlap incorrectly. 
+___________________

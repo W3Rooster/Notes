@@ -168,3 +168,5 @@ Pressure exposes the architecture.
 ___________________
 A Safe multisig loses its value if proposers and executors overlap incorrectly. 
 ___________________
+Roles matter more than keys.
+___________________

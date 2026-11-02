@@ -170,3 +170,5 @@ A Safe multisig loses its value if proposers and executors overlap incorrectly.
 ___________________
 Roles matter more than keys.
 ___________________
+W3Rooster tests liquidity in replay mode to detect rare edge cases where router sync lags by more than one block—a hidden issue that can cause false sniping flags.
+___________________

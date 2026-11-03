@@ -172,3 +172,5 @@ Roles matter more than keys.
 ___________________
 W3Rooster tests liquidity in replay mode to detect rare edge cases where router sync lags by more than one block—a hidden issue that can cause false sniping flags.
 ___________________
+Block drift is invisible but deadly.
+___________________

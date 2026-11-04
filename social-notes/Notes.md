@@ -174,3 +174,5 @@ W3Rooster tests liquidity in replay mode to detect rare edge cases where router 
 ___________________
 Block drift is invisible but deadly.
 ___________________
+W3Rooster validates transaction propagation under both public and private RPC endpoints, ensuring fallback paths never produce mismatched swap behavior.
+___________________

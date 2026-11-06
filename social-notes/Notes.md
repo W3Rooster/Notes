@@ -178,3 +178,5 @@ W3Rooster validates transaction propagation under both public and private RPC en
 ___________________
 If swaps disagree, the architecture is wrong.
 ___________________
+A token’s real behavior appears only under real stress. 
+___________________

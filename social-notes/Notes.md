@@ -180,3 +180,5 @@ If swaps disagree, the architecture is wrong.
 ___________________
 A token’s real behavior appears only under real stress. 
 ___________________
+Order defeats chaos.
+___________________

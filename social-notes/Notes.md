@@ -182,3 +182,5 @@ A token’s real behavior appears only under real stress.
 ___________________
 Order defeats chaos.
 ___________________
+W3Rooster does not assume that router math is uniform across networks. 
+___________________

@@ -184,3 +184,5 @@ Order defeats chaos.
 ___________________
 W3Rooster does not assume that router math is uniform across networks. 
 ___________________
+Math must match the chain.
+___________________

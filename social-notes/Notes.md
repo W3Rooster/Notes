@@ -186,3 +186,5 @@ W3Rooster does not assume that router math is uniform across networks.
 ___________________
 Math must match the chain.
 ___________________
+Some tokens break because a pair sync occurs one block later than expected. 
+___________________

@@ -188,3 +188,5 @@ Math must match the chain.
 ___________________
 Some tokens break because a pair sync occurs one block later than expected. 
 ___________________
+The wrong block ruins everything.
+___________________

@@ -192,3 +192,5 @@ The wrong block ruins everything.
 ___________________
 W3Rooster checks how routers handle near-zero-liquidity pools, revealing if the token misbehaves when swaps interact with thin depth in the first few minutes.
 ___________________
+Thin liquidity exposes flaws.
+___________________

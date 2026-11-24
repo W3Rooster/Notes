@@ -194,3 +194,5 @@ W3Rooster checks how routers handle near-zero-liquidity pools, revealing if the 
 ___________________
 Thin liquidity exposes flaws.
 ___________________
+Some teams overlook RPC consensus lag, but our team checks each provider’s finality delay so block-dependent features don’t trigger prematurely.
+___________________

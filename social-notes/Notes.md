@@ -196,3 +196,5 @@ Thin liquidity exposes flaws.
 ___________________
 Some teams overlook RPC consensus lag, but our team checks each provider’s finality delay so block-dependent features don’t trigger prematurely.
 ___________________
+Finality is not the same as speed.
+___________________

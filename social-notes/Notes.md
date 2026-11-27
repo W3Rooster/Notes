@@ -200,3 +200,5 @@ Finality is not the same as speed.
 ___________________
 W3Rooster reconstructs transaction paths during fork-based swaps to ensure no hidden internal call alters the effective output during a buy.
 ___________________
+Hidden paths create hidden risks.
+___________________
